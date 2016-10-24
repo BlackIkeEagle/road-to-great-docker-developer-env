@@ -34,6 +34,7 @@
 		<![endif]-->
 
         <style>
+            body { background: #253238; background-color: #253238 }
             h2 { text-align: left; }
         </style>
 
@@ -59,46 +60,43 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
-					<h1>Road to a great docker developer environment</h1>
-					<p>
-                        How do we get to a great development environment and how we can build it ourself
-					</p>
-				</section>
+				<section data-background='assets/docker-title-page.jpg'></section>
 
 				<section>
-					<h2>The Goal of this presentation</h2>
-                    <p>
-                        Explain how we got here and what is the road ahead
-                    </p>
+					<h2>How to get to a great development environment</h2>
+                    <p class="fragment"><small>I might be very opiniated</small></p>
 				</section>
 
                 <section>
-                    <section>
-                        <h2>You know docker?</h2>
-                    </section>
+                    <section data-background='assets/docker-you-know.jpg'></section>
 
-                </section>
+                    <section data-background='assets/hackers.jpg'></section>
 
-                <section>
-                    <section>
-                        <h2>No? Some basic information ...</h2>
-                    </section>
+                    <section data-background='assets/Container-Yard.jpg'></section>
 
                     <section>
-                        <h2>Containers, not a VM</h2>
-                    </section>
-
-                    <section>
-                        <h2>Should be one container per service</h2>
+                        <h2>Available on different platforms</h2>
+                        <ul>
+                            <li>FreeBSD Jails</li>
+                            <li>Solaris Zones</li>
+                            <li>OpenVZ</li>
+                            <li>LXC</li>
+                        </ul>
                     </section>
 
                     <section>
-                        <h2>Originated in Linux</h2>
+                        <h2>Linux container support</h2>
                         <ul>
                             <li>cgroups</li>
                             <li>namespaces</li>
+                            <li>capabilities</li>
                         </ul>
+                    </section>
+
+                    <section>
+                        <h2>hello Docker</h2>
+                        <p class="fragment">first made LXC easy</p>
+                        <p class="fragment">then libcontainer</p>
                     </section>
 
                     <section>
@@ -107,7 +105,7 @@
                     </section>
 
                     <section>
-                        <h2>macOS (before OSX)</h2>
+                        <h2>macOS (OSX)</h2>
                         <p>No real support, there is still a hypervisor in between</p>
                     </section>
                 </section>
@@ -198,7 +196,7 @@
 
                 <section>
                     <section>
-                        <h2>macOS (before OSX)</h2>
+                        <h2>macOS (OSX)</h2>
                     </section>
 
                     <section>
@@ -275,6 +273,9 @@
 				progress: true,
 				history: true,
 				center: true,
+
+                width: "90%",
+                height: "90%",
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
