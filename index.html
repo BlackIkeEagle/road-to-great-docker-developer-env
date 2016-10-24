@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Vim for PHP Developers</title>
+		<title>Road to a great docker development environment</title>
 
 		<meta name="description" content="Road to a great docker development environment">
 		<meta name="author" content="Ike Devolder">
@@ -70,84 +70,104 @@
                 <section>
                     <section data-background='assets/docker-you-know.jpg'></section>
 
-                    <section data-background='assets/hackers.jpg'></section>
-
-                    <section data-background='assets/Container-Yard.jpg'></section>
-
-                    <section>
-                        <h2>Available on different platforms</h2>
-                        <ul>
-                            <li>FreeBSD Jails</li>
-                            <li>Solaris Zones</li>
-                            <li>OpenVZ</li>
-                            <li>LXC</li>
-                        </ul>
+                    <section data-background='assets/virtual-machine.jpg'>
+                        <aside class="notes">
+                            <h2>virtual machine</h2>
+                            <ul>
+                                <li>full os in isolation</li>
+                                <li>fairly big overhead</li>
+                                <li>performance impact</li>
+                            </ul>
+                        </aside>
                     </section>
 
-                    <section>
-                        <h2>Linux container support</h2>
-                        <ul>
-                            <li>cgroups</li>
-                            <li>namespaces</li>
-                            <li>capabilities</li>
-                        </ul>
+                    <section data-background='assets/containers.jpg'>
+                        <aside class="notes">
+                            <h2>containers</h2>
+                            <ul>
+                                <li>full process isolation</li>
+                                <li>no big overhead</li>
+                                <li>no performance impact</li>
+                            </ul>
+                        </aside>
                     </section>
 
-                    <section>
-                        <h2>hello Docker</h2>
-                        <p class="fragment">first made LXC easy</p>
-                        <p class="fragment">then libcontainer</p>
+                    <section data-background='assets/container-technologies.jpg'>
+                        <aside class="notes">
+                            <ul>
+                                <li>FreeBSD Jails</li>
+                                <li>Solaris Zones</li>
+                                <li>OpenVZ</li>
+                                <li>Linux Containers</li>
+                            </ul>
+                        </aside>
                     </section>
 
-                    <section>
-                        <h2>Windows support is there</h2>
-                        <p>I have no clue how the windows stuff works</p>
+                    <section data-background='assets/linux-containers.jpg'>
+                        <aside class="notes">
+                            <h2>Linux container support</h2>
+                            <ul>
+                                <li>cgroups: limits, accounts for, and isolates the resource usage</li>
+                                <li>namespaces: isolates and virtualizes system resources of a collection of processes</li>
+                                <li>capabilities: fine-grained control over superuser permissions</li>
+                            </ul>
+                        </aside>
                     </section>
 
-                    <section>
-                        <h2>macOS (OSX)</h2>
-                        <p>No real support, there is still a hypervisor in between</p>
-                    </section>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Required docker internals</h2>
-                    </section>
-
-                    <section>
-                        <h2>docker networking</h2>
-                    </section>
-
-                    <section>
-                        <h2>linking</h2>
-                    </section>
-
-                    <section>
-                        <h2>volumes</h2>
-                    </section>
-
-                    <section>
-                        <h2>docker-compose</h2>
+                    <section data-background='assets/docker-bg.jpg'>
+                        <aside class="notes">
+                            <ul>
+                                <li>made lxc easy</li>
+                                <li>then own implementation in libcontainer</li>
+                            </ul>
+                            <ul>
+                                <li>windows: hypervisor, (native support?)</li>
+                                <li>macOS: hypervisor</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>First try</h2>
+                    <section data-background='assets/docker-internals.jpg'></section>
+
+                    <section data-background='assets/docker-networking.jpg'>
+                        <aside class="notes">
+                            <ul>
+                                <li>uses its own 'lan'</li>
+                                <li>not default exposed</li>
+                                <li>changes firewall settings</li>
+                            </ul>
+                        </aside>
                     </section>
 
-                    <section>
-                        <h2>fat container</h2>
+                    <section data-background='assets/docker-linking.jpg'>
+                        <aside class="notes">
+                            <ul>
+                                <li>links containers together via hosts</li>
+                            </ul>
+                        </aside>
                     </section>
 
-                    <section>
-                        <h2>tried to replace a vm with one container</h2>
+                    <section data-background='assets/docker-volumes.jpg'>
+                        <aside class="notes">
+                            <ul>
+                                <li>physical machine</li>
+                                <li>other containers</li>
+                                <li>remote machine</li>
+                            </ul>
+                        </aside>
                     </section>
+                </section>
 
-                    <section>
-                        <h2>nasty, lots of bugs and created a lot of other problems</h2>
-                    </section>
+                <section data-background='assets/fat-container.jpg'>
+                    <aside class="notes">
+                        <ul>
+                            <li>fat container</li>
+                            <li>tried to mimic vm</li>
+                            <li>hard to see what's going on</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section>
@@ -278,7 +298,7 @@
                 height: "90%",
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'fade',
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
